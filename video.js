@@ -2,6 +2,24 @@
 const links = [...menu.querySelectorAll('a[href^="#"]')];
 const sections = links.map((link) => document.getElementById(link.hash.slice(1)));
 
+const toggle = menu.querySelector(".menu-toggle");
+menu.classList.add("menu-enhanced");
+
+toggle.addEventListener("click", () => {
+  toggle.setAttribute("aria-expanded", String(toggle.getAttribute("aria-expanded") !== "true"));
+});
+
+function closeMenu() {
+  if (toggle.getAttribute("aria-expanded") !== "true") return;
+  toggle.setAttribute("aria-expanded", "false");
+  toggle.focus();
+}
+
+links.forEach((link) => link.addEventListener("click", closeMenu));
+menu.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeMenu();
+});
+
 function updateCurrentSection() {
   const marker = menu.getBoundingClientRect().bottom + 24;
   let current = sections.findLastIndex((section) => section.getBoundingClientRect().top <= marker);
