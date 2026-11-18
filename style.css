@@ -168,7 +168,7 @@ th { width: 30%; color: var(--accent-ink); font-size: .78rem; text-transform: up
               linear-gradient(0deg, var(--navy), transparent 45%);
 }
 .front-head { justify-content: flex-start; gap: .75rem; padding-top: 1rem; letter-spacing: .12em; font-size: .8rem; }
-.front-title { margin-top: clamp(-40px, -3vw, -12px); margin-bottom: clamp(.5rem, 2svh, 1.25rem); }
+.front-title { margin-top: clamp(1.5rem, 12svh, 8rem); margin-bottom: clamp(.5rem, 2svh, 1.25rem); }
 .front-role { border-left: 3px solid var(--lime); padding-left: .9rem; line-height: 1.25; }
 .front-role h2 { text-transform: uppercase; font-style: italic; font-size: clamp(1.15rem, 2vw, 2rem); }
 .front-role p, .front-label { color: var(--lime); text-transform: uppercase; font-weight: 800; font-size: .86rem; }
@@ -270,7 +270,7 @@ nav .menu-contact[aria-current] { color: var(--navy); }
   .clips { grid-template-columns: minmax(0, 1fr); }
   .masthead, .folio { font-size: .65rem; }
   .front { min-height: calc(100svh - 5.1rem + var(--section-gap)); }
-  .front-title { margin-top: -.5rem; }
+  .front-title { margin-top: clamp(1.5rem, 7svh, 3.5rem); }
   .front-photo { left: 0; }
   .front-photo img { object-position: 38% center; }
   .front-photo::after { background: linear-gradient(90deg, #111d33d9, #111d331a), linear-gradient(0deg, var(--navy) 4%, transparent 52%); }
